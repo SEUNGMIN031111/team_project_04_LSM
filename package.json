@@ -1,0 +1,13 @@
+{
+  "name": "seongbuk-safe-complaint-filter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "성북 안심 민원 필터 시제품 — public(화면) + api(서버)",
+  "scripts": {
+    "start": "node --env-file=.env server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
