@@ -235,7 +235,7 @@
     const ai = it.ai || {};
     const stage = it.currentStage;
     return `
-      <div class="sheet-head"><div>${manual ? '<h2>민원 원문</h2>' : ''}<p class="muted">${esc(it.source)}${it.at ? ' · ' + esc(it.at) : ''}</p></div><button class="icon-btn" type="button" data-act="close" aria-label="닫기">${ICON.x}</button></div>
+      <div class="sheet-head${manual ? '' : ' center'}"><div>${manual ? '<h2>민원 원문</h2>' : ''}<p class="muted">${esc(it.source)}${it.at ? ' · ' + esc(it.at) : ''}</p></div><button class="icon-btn" type="button" data-act="close" aria-label="닫기">${ICON.x}</button></div>
       ${manual ? '' : `
       <div class="chips">${stageBadge(stage)}${it.decision ? '<span class="badge confirmed">✓ 단계 확정됨</span>' : ''}
         <span class="badge ${it.mode === '실시간' ? 'live' : 'demo'}">${esc(it.mode)}</span>
