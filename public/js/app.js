@@ -173,7 +173,7 @@
         <div class="mark">${ICON.check}</div>
         <h1>접수됐어요</h1>
         <p>${flaggedAsIs ? '접수되었습니다. 일부 표현은 가려진 채 담당자에게 전달됩니다.' : '담당 공무원이 확인해요.'}</p>
-        <p>처리 기간은 주말 · 공휴일을 빼고 7일이에요. 안내를 받았어도 처리 기한은 그대로예요.</p>
+        <p>주말·공휴일을 빼고 7일 안에 답변을 드려요. 필요하면 처리 기간이 늘어날 수 있어요.</p>
       </div>
       ${d.providerLabel ? `<p class="muted" style="text-align:center">표현 확인: ${esc(d.providerLabel)} (${esc(d.mode)})</p>` : ''}
       <div class="btn-stack" style="margin-top:32px">
