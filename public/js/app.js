@@ -240,24 +240,27 @@
       <div class="chips">${stageBadge(stage)}${it.decision ? '<span class="badge confirmed">✓ 단계 확정됨</span>' : ''}
         <span class="badge ${it.mode === '실시간' ? 'live' : 'demo'}">${esc(it.mode)}</span>
         ${it.providerLabel ? '<span class="badge demo">' + esc(it.providerLabel) + ' 답변</span>' : ''}</div>
+      <h3 class="sheet-step">1. 민원 확인</h3>
       <div class="aibox"><div class="label">핵심 요약 ${aiMade}</div><p>${esc(ai.summary)}</p></div>
       ${stage === '정상' ? '' : `<div class="aibox"><div class="label">순화본 · 요구는 그대로, 표현만 바꿨어요 ${aiMade}</div><p>${esc(ai.suggestion)}</p></div>`}
       <div class="pair">
         <div class="aibox"><div class="label">AI 판단 이유</div><p>${esc(ai.reason || '-')}</p></div>
         <div class="aibox"><div class="label">정상 민원일 수 있는 근거</div><p>${esc(ai.normalEvidence || '-')}</p></div>
       </div>
+      <h3 class="sheet-step">2. 원문 보기</h3>
       ${Object.keys(hitsByCat).length ? `<div><p class="muted" style="margin-bottom:8px">1차 표현 목록에서 걸린 것(표현은 가려서 보여 줘요)</p><div class="chips">${Object.entries(hitsByCat).map(([c, n]) => `<span class="chip">${esc(c)} <span class="count">${n}</span></span>`).join('')}</div></div>` : ''}
       `}
       ${showOrig || manual || stage === '정상'
-        ? `<div class="aibox"><div class="label">원문${manual || stage === '정상' ? '' : ' · 문제 문장 표시'}</div><p>${highlightOriginal(it.text, ai.flagged)}</p></div>${manual || stage === '정상' ? '' : '<button class="btn m secondary" type="button" data-act="toggleorig" data-id="' + esc(it.id) + '">원문 닫기</button>'}`
-        : `<button class="btn m secondary" type="button" data-act="toggleorig" data-id="${esc(it.id)}">원문 보기</button>`}
+        ? `<div class="aibox"><div class="label">원문${manual || stage === '정상' ? '' : ' · 문제 문장 표시'}</div><p>${highlightOriginal(it.text, ai.flagged)}</p></div>${manual || stage === '정상' ? '' : '<button class="btn m secondary orig-btn" type="button" data-act="toggleorig" data-id="' + esc(it.id) + '">원문 닫기</button>'}`
+        : `<button class="btn m secondary orig-btn" type="button" data-act="toggleorig" data-id="${esc(it.id)}">원문 확인하기</button>`}
       ${manual ? '' : `
+      <h3 class="sheet-step">3. 단계 정하기</h3>
       ${locked ? `
       <div class="notice confirmed-box">${ICON.info}<span><b>단계를 확정했어요</b><br>${esc(lastText)}</span></div>
       <button class="btn secondary" type="button" data-act="edit" data-id="${esc(it.id)}">단계 수정하기</button>
       ` : `
       <div class="field">
-        <label>${it.decision ? '단계 수정하기' : '단계 정하기'}</label>
+        ${it.decision ? '<label>단계 수정하기</label>' : ''}
         <div class="chips" role="group" aria-label="단계">${STAGES.map((s) => `<button type="button" class="chip" aria-pressed="${(S.sheet.pick || stage) === s}" data-act="pick" data-s="${s}">${s}</button>`).join('')}</div>
       </div>
       ${(S.sheet.pick && S.sheet.pick !== stage) ? `

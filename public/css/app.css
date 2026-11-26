@@ -156,6 +156,9 @@ textarea::placeholder, input::placeholder { color: var(--grey-500); }
 .aibox { background: #fff; border: 1px solid var(--grey-200); border-radius: 14px; padding: 14px 16px; }
 .aibox .label { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; font-size: 12px; font-weight: 700; color: var(--grey-600); }
 .aibox p { white-space: pre-wrap; }
+.sheet .aibox .label { color: var(--grey-900); }
+.sheet > .sheet-step { margin-top: 28px; }
+.btn.orig-btn { border: 1.5px solid var(--red-500); }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .pair .aibox { min-height: 96px; }
 @media (max-width: 420px) { .pair { grid-template-columns: 1fr; } }
