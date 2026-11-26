@@ -49,7 +49,8 @@ export function analyzeSentence(sentence) {
 }
 
 export function analyze(text) {
-  const sentences = String(text).split(/(?<=[.!?。\n])\s*/).map((s) => s.trim()).filter(Boolean);
+  // 문장 부호 뒤에 공백이 있을 때만 문장을 나눈다 — 「개.새.끼」처럼 마침표로 끊어 쓴 표현이 한 문장에 남도록
+  const sentences = String(text).split(/(?<=[.!?。])\s+|\n+/).map((s) => s.trim()).filter(Boolean);
   const flagged = [];
   const hits = [];
   for (const s of sentences) {
@@ -70,7 +71,7 @@ export function redact(text) {
   let out = String(text);
   for (const t of TERMS) {
     const raw = t[0];
-    if (raw.length >= 2) out = out.split(raw).join('○○');
+    out = out.split(raw).join('○○');
   }
   return out;
 }
