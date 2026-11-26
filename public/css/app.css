@@ -172,6 +172,7 @@ mark { background: var(--red-wash); color: inherit; border-radius: 4px; padding:
 .sheet { position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%); width: min(100%, 560px); max-height: 88vh; overflow: auto; background: #fff; border-radius: 24px 24px 0 0; z-index: 41; padding: 24px 24px calc(24px + env(safe-area-inset-bottom)); box-shadow: 0 -2px 12px rgba(25, 31, 40, 0.06); animation: rise var(--slow) var(--ease-out) forwards; }
 .sheet > * + * { margin-top: 16px; }
 .sheet-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.sheet-head.center { align-items: center; }
 .icon-btn { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; color: var(--grey-600); margin: -8px -10px 0 0; }
 .icon-btn:active { background: var(--grey-100); }
 @keyframes fade { to { opacity: 1; } }
