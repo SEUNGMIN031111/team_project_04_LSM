@@ -103,7 +103,7 @@
       <p class="demo-pill" style="display:inline-block">가상 민원만 써요 · 서버에 저장되지 않아요</p>
       <h1>AI는 표시만 하고,<br>결정은 사람이 해요</h1>
       <p class="lead">욕설이나 협박이 섞인 온라인 민원 글을 담당 공무원이 원문 그대로 읽지 않아도 되게 도와요. 민원인은 어떤 글이든 그대로 제출할 수 있어요.</p>
-      <div class="section-head" style="margin-top:24px !important"><h2>성북 안심민원이란?</h2></div>
+      <div class="section-head" style="margin-top:24px !important"><h2>1. 성북 안심민원이란?</h2></div>
       <p>온라인으로 들어오는 민원 글에 섞인 욕설·협박 표현을 AI가 미리 순화해서, 담당 공무원이 원문을 그대로 읽지 않아도 되게 돕는 서비스예요.</p>
       <p>AI는 표시와 단계 제안까지만 하고, 최종 결정은 담당 공무원이 해요.</p>
       <table class="flow">
@@ -114,7 +114,7 @@
           <tr><td>글을 써서 내요</td><td>표현을 확인해요</td><td>3단계로 제안해요</td><td>확정하거나 바꿔요</td></tr>
         </tbody>
       </table>
-      <div class="section-head" style="margin-top:24px !important"><h2>처음이라면 이 순서로 눌러 보세요</h2></div>
+      <div class="section-head" style="margin-top:24px !important"><h2>2. 처음이라면 이 순서로 눌러 보세요</h2></div>
       <p class="muted">카드를 누르면 그 화면으로 이동해요. 위쪽 탭이나 집 모양 아이콘으로 언제든 돌아올 수 있어요.</p>
       <ol class="steps">
         <li><a class="step" href="#/citizen" data-act="nav" data-to="citizen">
@@ -130,7 +130,7 @@
           <span class="grow"><span class="badge demo">관리자 화면</span><span class="title">확정·변경 기록과 통계 살펴보기</span><span class="sub">판단 변경률 · 판단 이력 · AI 호출 기록을 봐요</span></span>
           <span class="step-go">살펴보기 ${ICON.chev}</span></a></li>
       </ol>
-      <div class="section-head"><h2>이 서비스가 하지 않는 일</h2></div>
+      <div class="section-head"><h2>3. 이 서비스가 하지 않는 일</h2></div>
       <div class="card">
         <ul style="padding-left:18px;color:var(--grey-800)">
           <li>접수를 거부하거나 글을 삭제하지 않아요</li>
