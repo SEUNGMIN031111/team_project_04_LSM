@@ -14,6 +14,7 @@
   --grey-200: #e5e8eb;
   --grey-100: #f2f4f6;
   --grey-50: #f9fafb;
+  --navy-900: #1b2a4a;
   --red-500: #f04452;
   --red-wash: oklch(0.94 0.04 18);
   --yellow-500: #ffc342;
@@ -39,7 +40,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
   color: var(--grey-900);
-  background: var(--grey-100);
+  background: var(--navy-900);
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
 }
